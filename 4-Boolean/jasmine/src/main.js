@@ -4,13 +4,13 @@ let prisonerIsAwake = true;
 let petDogIsPresent = true;
 
 // Task 1: Fast Attack Availability
-let canExectuteFastAttack = false;
+let canExectuteFastAttack = !knightIsAwake;
 
 // Task 2: Spy Availability
-let canSpy = true;
+let canSpy = knightIsAwake || archerIsAwake || prisonerIsAwake;
 
 // Task 3: Signal Prisoner Availability
-let canSignalPrisoner = true;
+let canSignalPrisoner = prisonerIsAwake && archerIsAwake;
 
 // Task 4: Free Prisoner 
-let canFreePrisoner = true;
+let canFreePrisoner = petDogIsPresent && !archerIsAwake || !petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake;
