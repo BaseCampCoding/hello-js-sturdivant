@@ -6,26 +6,35 @@ let getItemResult = stack[position];
 
 // Task 2: Exchange a Card in the Stack
 let replacementCard = 11;
-stack[6] = replacementCard;
+stack[position] = replacementCard;
 
 // Task 3: Insert a Card at the Top of the Stack
-let newCardTop = 0;
-stack.unshift(15) = newCardTop;
+let newCardTop =25;
+stack.unshift(newCardTop);
 
 // Task 4: Remove a Card from the Stack
-stack.splice(3,1);
+position = 8
+stack.splice(position, 1);
 
 // Task 5: Remove the Top Card from the Stack
-stack.splice(0);
+stack.shift();
 
 // Task 6: Insert a Card at the Bottom of the Stack
-let newCardBottom = 18;
+newCardBottom = 18;
 stack.push(newCardBottom);
 
 // Task 7: Remove a Card from the Bottom of the Stack
 stack.pop();
 
 // Task 8: Check the Size of the Stack
-let stackSize = 20;
-let checkSizeOfStackResult = stackSize == stack.length;
-console.log(checkSizeOfStackResult);
+let stackSize = 9;
+let checkSizeOfStackResult = stack.length === stackSize;
+
+// if (stackSize == stack.length) {
+//     checkSizeOfStackResult = true;
+// }
+// else {
+//     checkSizeOfStackResult = false;
+// }
+
+console.log(checkSizeOfStackResult)
