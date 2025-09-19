@@ -9,8 +9,25 @@ let twoSum = Number(number1) + Number(number2);
 
 // Task 2: Determine if a Number is a Palindrome
 let luckyInput = 12321;
-let luckyInputStr = 'anna';
+let luckyInputStr = luckyInput.toString().split('').reverse().join('');
 let luckyNumber;
-if (parseFloat(luckyInput.toString().split('').reverse().join('')) === luckyInput) {
-    luckyNumber = 
+if (parseFloat(luckyInputStr) === luckyInput) {
+    luckyNumber = true;
+}
+else {
+    luckyNumber = false;
+}
+
+// Task 3: Generate an Error Message for Invalid User Input
+let userInput;
+let errorMessage;
+
+if (userInput === null || userInput === undefined || userInput === '') {
+    errorMessage = 'Required Field'
+}
+else if (userInput === '0') {
+    errorMessage = 'Must be a number besides 0'
+}
+else {
+    errorMessage = ''
 }
