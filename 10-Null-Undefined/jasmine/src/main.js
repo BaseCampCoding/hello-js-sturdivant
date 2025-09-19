@@ -24,13 +24,13 @@ const tickets = {
     T004 : null
 };
 
-let ticketIdToCheck = 'T001';
+let ticketIdToCheck = 'T006';
 let ticketStatusResult;
 
 if (!(ticketIdToCheck in tickets)) {
     ticketStatusResult = 'unknown ticket id';
 }
-else if (ticketIdToCheck === null) {
+else if (tickets[ticketIdToCheck] === null) {
     ticketStatusResult = 'not sold';
 }
 else {
@@ -39,7 +39,7 @@ else {
 
 console.log(ticketStatusResult)
 
-// Task 4: Improve the TIcket Status Response
+// Task 4: Improve the Ticket Status Response
 let simpleTicketStatusResult;
 
 if (typeof tickets[ticketIdToCheck] === "string" && tickets[ticketIdToCheck].length > 0) {
