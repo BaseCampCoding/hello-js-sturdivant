@@ -27,7 +27,7 @@ console.log(scoreboard);
 // Task 5: Apply Monday Bonus Points
 let mondayBonus = 100;
 for (let key in scoreboard) {
-    scoreboard[key] += 100;
+    scoreboard[key] += mondayBonus;
 }
 
 console.log(scoreboard);
