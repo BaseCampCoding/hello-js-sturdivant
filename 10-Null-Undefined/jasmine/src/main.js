@@ -54,7 +54,7 @@ console.log(simpleTicketStatusResult)
 // Task 5: Determine the Version of Terms and Conditions
 const visitorWithGtc = {
     gtc : {
-        version : '1.0'
+        version : 'v2.0'
     }
 };
 
