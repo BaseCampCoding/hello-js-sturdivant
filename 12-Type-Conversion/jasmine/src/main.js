@@ -22,12 +22,12 @@ else {
 let userInput;
 let errorMessage;
 
-if (userInput === null || userInput === undefined || userInput === '') {
-    errorMessage = 'Required Field'
+if (userInput === null || userInput === undefined || userInput.length === 0) {
+    errorMessage = 'Required Field';
 }
 else if (userInput === '0') {
-    errorMessage = 'Must be a number besides 0'
+    errorMessage = 'Must be a number besides 0';
 }
 else {
-    errorMessage = ''
+    errorMessage = '';
 }

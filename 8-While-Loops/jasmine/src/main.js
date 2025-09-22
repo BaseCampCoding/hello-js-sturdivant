@@ -1,73 +1,77 @@
 // Task 1: Determine How Long It Takes to Mix a Juice
-let juiceName = 'Pure Strawberry Joy'
+let juiceName = 'Energizer';
 let timeToMixJuiceResult;
 
-if (juiceName === 'Pure Strawberry Joy') {
+if (juiceName == "Pure Strawberry Joy"){
     timeToMixJuiceResult = 0.5;
 }
-else if (juiceName === 'Energizer' || juiceName === 'Green Garden') {
+else if (juiceName == "Energizer" || juiceName == "Green Garder"){
     timeToMixJuiceResult = 1.5;
 }
-else if (juiceName === 'Tropical Island') {
+else if (juiceName == "Tropical Island"){
     timeToMixJuiceResult = 3;
 }
-else if (juiceName === 'All or Nothing') {
+else if (juiceName == "All or Nothing"){
     timeToMixJuiceResult = 5;
 }
-else {
+else{
     timeToMixJuiceResult = 2.5;
 }
 
+
 // Task 2: Replenish the Lime Wedge Supply
-let wedgesNeeded = 100;
-limes = ['small', 'medium', 'large'];
+let wedgesNeeded = 20;
+i = 0;
 wedgesCut = 0;
 limesCut = 0;
-index = 0
+limes = ["small", "large", "medium", "large", "small"]
 
-while (wedgesCut < wedgesNeeded && limesCut) {
-    if(limes[i] == 'small') {
-        wedgesCut += 6;
+while(wedgesCut < wedgesNeeded && i < limes.length){
+    if (limes[i] == "small"){
+        wedgesCut += 6
     }
-    else if(limes[i] == 'medium') {
-        wedgesCut += 8;
+    else if (limes[i] == "medium"){
+        wedgesCut += 8
     }
-    else if(limes[i] == 'large') {
-        wedgesCut += 10;
+    else if (limes[i] == "large"){
+        wedgesCut += 10
     }
-    limes++
+    limesCut++
     i++
 }
 
+
 // Task 3: Finish Up the Shift
-let timeLeft = 50;
-let orders = ['Energizer', 'All or Nothing', 'Green Garden', 'Tropical Garden']
+let timeLeft = 7;
 let totalTime = 0;
-let orderTrack[];
+let orderIndex = 0
+let orders = ["Energizer", "All or Nothing", "Pure Strawberry Joy", "Tropical Island"];
+let orderTrack = []
 
-for(let i = 0; i < orders.length; i++) {
-    let juice = orders[i];
-
-    if (juice === 'Pure Strawberry Joy') {
-        timeToMixJuiceResult = 0.5;
+while (totalTime < timeLeft && orderIndex < orders.length){
+    if (orders[orderIndex] == "Pure Strawberry Joy"){
+        totalTime += 0.5
     }
-    else if (juice === 'Energizer' || juiceName === 'Green Garden') {
-        timeToMixJuiceResult = 1.5;
+    else if(orders[orderIndex] == "Energizer" || orders[orderIndex] == "Green Garden"){
+        totalTime += 1.5;
     }
-    else if (juice === 'Tropical Island') {
-        timeToMixJuiceResult = 3;
+    else if(orders[orderIndex] == "Tropical Island"){
+        totalTime += 3;
     }
-    else if (juice === 'All or Nothing') {
-        timeToMixJuiceResult = 5;
+    else if(orders[orderIndex] == "All or Nothing"){
+        totalTime += 5;
     }
-    else {
-        timeToMixJuiceResult = 2.5;
+    else{
+        totalTime += 2.5;
     }
-
-    orderTrack.push(juice);
-    totalTime += timeToMixJuiceResult;
+    orderIndex += 1;
 }
 
-console.log(totalTime < timeLeft && i < orderTrack) {
-    
+let remainingOrders = []
+
+if(orderIndex < orders.length){
+    for (let t = orderIndex; t < orders.length; t++)
+    remainingOrders.push(orders[t])
 }
+
+console.log(remainingOrders);
